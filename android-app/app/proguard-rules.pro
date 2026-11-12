@@ -1,0 +1,5 @@
+-keep class com.google.firebase.** { *; }
+-keep class com.phishguard.NotificationScannerService { *; }
+-keep class com.phishguard.PhishGuardMessagingService { *; }
+-keep class com.phishguard.MainActivity { *; }
+-keepnames class kotlinx.coroutines.internal.MainDispatcherFactory {}

@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: phishguard-dl-server
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --workers 2 --bind 0.0.0.0:$PORT --timeout 90
+    envVars:
+      - key: SESSION_TOKEN
+        sync: false
+      - key: FIREBASE_SERVICE_ACCOUNT_PATH
+        value: ./firebase-service-account.json
+    # Upload firebase-service-account.json as Secret File in Render dashboard
+    # NOTE: Upload trained model files (flask-server/models/) to Render too.
+    #       Models are NOT committed to git (too large).
+    #       Options: use Render persistent disk OR train on a VPS.

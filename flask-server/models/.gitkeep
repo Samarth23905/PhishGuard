@@ -1,0 +1,10 @@
+# Trained model files go here after running training/train_all.py
+# Files expected:
+#   url_model.keras
+#   url_model_config.json
+#   sms_model.keras
+#   sms_tokenizer.pkl
+#   sms_model_config.json
+#   page_model.keras
+#   page_tokenizer.pkl
+#   page_model_config.json
